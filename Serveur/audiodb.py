@@ -24,27 +24,30 @@ def get_random_album(artist_name: str):
     m = randrange(0, len(album))
     return album[m]
 
-
-
 # obtenir un track au hazard
 def get_random_track(artist_name: str):
-    # id_artist = get_artiste(artist_name)['artists'][0]['idArtist']
     id_album = get_random_album(artist_name)["idAlbum"]
     res = requests.get(os.getenv("url_track") + id_album)
     track = res.json()['track']
     m = randrange(0, len(track))
-    return track[m]   # voir la possibilité de récupérer que des info interesssantes
-
+    songs = {}
+    songs ['artist'] = track[m]["strArtist"]
+    songs['title'] = track[m]["strTrack"]
+    return songs 
+ 
 # obtenir une video au hazard
 
 def get_random_video(artist_name: str):
     id_artist = get_artiste(artist_name)['artists'][0]['idArtist']
-    res = requests.get("https://theaudiodb.com/api/v1/json/2/mvid.php?i=" + id_artist)
+    res = requests.get(os.getenv("url_video") + id_artist)
     video = res.json()['mvids']
-    m = randrange(0, len(video))
-    return video[m]
+    if video == None:
+        return video 
+    else:
+        m = randrange(0, len(video))
+        return video[m]["strMusicVid"]
 
-# a=get_random_track(artist_name='Technotronic')
+# a=get_random_video(artist_name='Tryo')
 # print(a)
 
 

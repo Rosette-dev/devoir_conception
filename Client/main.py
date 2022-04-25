@@ -2,7 +2,6 @@ from dotenv import load_dotenv
 import os
 import json
 import requests
-#from pydantic import BaseModel
 from random import randrange
 
 load_dotenv()
@@ -24,7 +23,8 @@ def get_playlists(liste_artiste):
         artist_name = liste_artiste[step]
         r = requests.get(os.getenv("url_service") + "/random/" + artist_name)
         playlist[i] = r.json()
-    return playlist
+    return playlist # vérifier les lyrics 
+# avant de sortir la playlist
 
 r = get_playlists(liste_artiste)
 print(r)
