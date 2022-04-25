@@ -7,7 +7,8 @@ def get_lyrics(artist_name):
     track = get_random_track(artist_name)
     title = track['strTrack']
     res = requests.get(os.getenv("url_lyric") + artist_name + "/" + title)
-    return res.json()
+    return res
 
-a=get_lyrics(artist_name='Bob Marley')
-print(a)
+# a=get_lyrics(artist_name='Bob Marley')
+# print(a)
+# 

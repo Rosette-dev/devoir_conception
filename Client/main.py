@@ -3,6 +3,7 @@ import os
 import json
 import requests
 #from pydantic import BaseModel
+from random import randrange
 
 load_dotenv()
 
@@ -14,8 +15,16 @@ def getname():
     return artist
 
 liste_artiste=getname()
-#for j in range(len(liste_artiste)):
 
-#r=requests.get("http://127.0.0.1:8000/random/"+ str(liste_artiste[5]))
-r=requests.get("http://127.0.0.1:8000")
-print(r.json())
+
+def get_playlists(liste_artiste):
+    playlist = dict()
+    for i in range(20):
+        step = randrange(0, len(liste_artiste))
+        artist_name = liste_artiste[step]
+        r = requests.get(os.getenv("url_service") + "/random/" + artist_name)
+        playlist[i] = r.json()
+    return playlist
+
+r = get_playlists(liste_artiste)
+print(r)
