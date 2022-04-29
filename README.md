@@ -40,7 +40,7 @@ TARGET_PORT=8000
 
 ```
 **CLIENT_DATA** doit être un json qui permet d'avoir le nom des artistes. Par exemple:
-```mermaid
+```ruby
 [
 {
     "artiste": "daft punk",
