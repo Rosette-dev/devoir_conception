@@ -27,4 +27,4 @@ def get_playlists(liste_artiste):
 # avant de sortir la playlist
 
 r = get_playlists(liste_artiste)
-print(r)
+print(r) 

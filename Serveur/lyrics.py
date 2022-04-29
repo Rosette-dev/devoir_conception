@@ -19,3 +19,7 @@ def get_lyrics(artist_name):
  
 # a=get_lyrics(artist_name='Technotronic')
 # print(a)
+
+# if __name__ == "__lyrics__":
+#     load_dotenv()
+    

@@ -1,12 +1,12 @@
-# import os
+import os
 # import json
 # import random
 import uvicorn
-#from dotenv import load_dotenv
+from dotenv import load_dotenv
 from fastapi import FastAPI
-import requests
+# import requests
 from lyrics import get_lyrics
-#load_dotenv()
+
 
 app = FastAPI()
 
@@ -20,6 +20,10 @@ async def get_playlist(artist_name):
     return res
 
 
+
+if __name__ == "__main__":
+    load_dotenv()
+    uvicorn.run(app, host="localhost", port=int(os.getenv("TARGET_PORT")))
 
 
 
