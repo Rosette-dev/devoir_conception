@@ -40,7 +40,7 @@ TARGET_PORT=8000
 
 ```
 **CLIENT_DATA** doit être un json qui permet d'avoir le nom des artistes. Par exemple:
-```mermaid
++++
 [{
     "artiste": "daft punk",
     "note": 18
@@ -49,7 +49,7 @@ TARGET_PORT=8000
     "artiste":"gloria gaynor",
     "note": 10
 }]
-```
++++
 ## Utilisation de l'application
 Une fois que vous avez correctement installé et configuré l'application, pour l'utiliser il suffit de lancer le fichier ```main.py``` situé à la racine.
 
