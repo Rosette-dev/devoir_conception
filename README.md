@@ -4,7 +4,7 @@
 
 ## Présentation application
 
-**Le Générateur de playlist ** est une application qui développe dans un premier temps un webservice et ensuite un client. 
+**Le Générateur de playlist** est une application qui développe dans un premier temps un webservice et ensuite un client. 
 L'application a pour objectif de permettre à l'utilisateur de générer une playliste aléatoire de musiques de ses artistes préférés. Pour ce faire, l'utilisateur a juste besoin de renseigner les noms de ses artistes préférés. Le webservice développé fournit l'information nécéssaire en se basant sur deux API: 
 
 * AudioDB 
@@ -40,16 +40,14 @@ TARGET_PORT=8000
 
 ```
 **CLIENT_DATA** doit être un json qui permet d'avoir le nom des artistes. Par exemple:
-;;;
-[{
+;;;[{
     "artiste": "daft punk",
     "note": 18
 },
 {
     "artiste":"gloria gaynor",
     "note": 10
-}]
-;;;
+}];;;
 ## Utilisation de l'application
 Une fois que vous avez correctement installé et configuré l'application, pour l'utiliser il suffit de lancer le fichier ```main.py``` situé à la racine.
 
