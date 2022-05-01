@@ -13,5 +13,6 @@ Un fichier **.env** est ausi disponible et liste les différents liens d'accès 
 
 Pour lancer le webservice, exécutez la ligne de code suivante:
 ```
+cd Serveur
 python main.py
 ```

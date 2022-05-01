@@ -11,6 +11,14 @@ L'application a pour objectif de permettre à l'utilisateur de générer une pla
 * LyricsOvh 
 
 Le client (l'utilisateur, vous par exemple) donne un fichier json avec le nom de ses artistes préférés. Lorsque l'application est lancée, le webservice requète les API et renvoit la playlist demandée.
+
+```mermaid
+graph TD;
+  Client-->Webservice;
+  Webservice-->API;
+```
+
+
 D'autres fonctionnalitées sont implémentées afin d'assurer le bon fonctionnement du webservice, ainsi qu'une meilleure expérience d'utilisaton pour préparer vos soirées karaoké entre amis :v:.
 
 
@@ -55,6 +63,13 @@ TARGET_PORT=8000
 ## Utilisation de l'application
 Une fois que vous avez correctement installé et configuré l'application, pour l'utiliser il suffit de lancer le fichier ```main.py``` situé à la racine.
 
+## Tests unitaires
+ Nous avons testé la méthode **get_artiste()** qui permet de récupérer l'identifiant d'un artiste.
+ Pour lancer le test, il faut exécuter le bout de code suivant dans le terminal: 
+``` 
+cd Serveur
+python -m unittest test.py
+```
 # Bonne utilisation !
 
 
