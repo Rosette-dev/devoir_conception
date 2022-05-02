@@ -13,6 +13,8 @@ def get_lyrics(artist_name):
     res = requests.get(os.getenv("url_lyric") + artist_name + "/" + songs["title"])
     if res.status_code == 200:
         songs["lyrics"] = res.json()
+    else:
+        songs["lyrics"] = None
     return (songs,res.status_code)
 
         

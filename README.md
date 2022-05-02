@@ -31,10 +31,18 @@ Première étape, cloner le repo via les commandes ci-dessous. Vous pouvez égal
 git clone https://github.com/Rosette-dev/devoir_conception.git
 ```
 
-Assurez vous que l'IDE que vous utilisez est bien configuré notamment au niveau du worksapce et PYTHONPATH.
+Assurez vous que l'IDE que vous utilisez est bien configuré notamment au niveau du workspace et PYTHONPATH.
 ### Installer les modules
 Ensuite, il est necessaire d'installer les libraries utiles (indispensable) au fonctionnement de l'app via la commande ci-dessous.
+Pour installer les librairies utiles pour le webservice, il faut lancer le code suivant:
 ```
+cd Serveur
+pip install -r requirements.txt
+```
+Pour installer celles utiles pour la partie Client, il afut lancer le code suivant:
+```
+cd ..
+cd Client
 pip install -r requirements.txt
 ```
 ### Configuration
@@ -61,10 +69,11 @@ TARGET_PORT=8000
 ]
 ```
 ## Utilisation de l'application
-Une fois que vous avez correctement installé et configuré l'application, pour l'utiliser il suffit de lancer le fichier ```main.py``` situé à la racine.
+Une fois que vous avez correctement installé et configuré l'application, vous pouvez l'utiliser pour générer vos playlists.
+Pour utiliser le webservice, il faut lancer le fichier ```main.py``` situé dans le fichier Serveur. Ensuite, dans un autre terminal, lancer un autre fichier ```main.py``` situé dans le dossier Client.
 
 ## Tests unitaires
- Nous avons testé la méthode **get_artiste()** qui permet de récupérer l'identifiant d'un artiste.
+ Nous avons testé la méthode **get_artiste()** qui permet de récupérer l'identifiant d'un artiste. Nous avons aussi testé le bon fonctionnement du Webservice.
  Pour lancer le test, il faut exécuter le bout de code suivant dans le terminal: 
 ``` 
 cd Serveur

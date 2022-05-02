@@ -1,11 +1,9 @@
 import os
 import uvicorn
-from dotenv import load_dotenv
 from fastapi import FastAPI
 from lyrics import get_lyrics
 from audiodb import *
 from health_service import *
-from fastapi import FastAPI
 from fastapi_health import health
 
 app = FastAPI()
@@ -26,6 +24,6 @@ if __name__ == "__main__":
     uvicorn.run(app, host="localhost", port=int(os.getenv("TARGET_PORT")))
 
 
-#uvicorn main:app --reload
+
 
 
