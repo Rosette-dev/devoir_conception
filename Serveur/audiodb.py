@@ -7,14 +7,14 @@ from random import randrange
 
 # obtenir des informations sur un artiste
 def get_artiste(artist_name: str):
-    res = requests.get(os.getenv("url_artiste") + artist_name)
+    res = requests.get(os.getenv("URL_ARTISTE") + artist_name)
     #idArtist = res.json()
     return (res.json(), res.status_code)
 
 # obtenir un album au hazard
 def get_random_album(artist_name: str):
     id_artist = get_artiste(artist_name)[0]['artists'][0]['idArtist']  
-    res = requests.get(os.getenv("url_album") + id_artist)
+    res = requests.get(os.getenv("URL_ALBUM") + id_artist)
     album = res.json()['album']
     m = randrange(0, len(album))
     return (album[m], res.status_code)
@@ -22,7 +22,7 @@ def get_random_album(artist_name: str):
 # obtenir un track au hazard
 def get_random_track(artist_name: str):
     id_album = get_random_album(artist_name)[0]["idAlbum"]
-    res = requests.get(os.getenv("url_track") + id_album)
+    res = requests.get(os.getenv("URL_TRACK") + id_album)
     track = res.json()['track']
     m = randrange(0, len(track))
     songs = {}
@@ -34,7 +34,7 @@ def get_random_track(artist_name: str):
 
 def get_random_video(artist_name: str):
     id_artist = get_artiste(artist_name)[0]['artists'][0]['idArtist']
-    res = requests.get(os.getenv("url_video") + id_artist)
+    res = requests.get(os.getenv("URL_VIDEO") + id_artist)
     video = res.json()['mvids']
     if video == None:
         return (video, res.status_code )

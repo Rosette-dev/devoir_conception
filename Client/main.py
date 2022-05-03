@@ -8,4 +8,4 @@ Playlist = get_playlists(liste_artiste=getname())
 with open("Playlist.json","w") as outfile:
     json.dump(Playlist, outfile)
     
-#print(json.dumps(Playlist,indent=4))
+

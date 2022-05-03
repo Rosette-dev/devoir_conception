@@ -23,7 +23,7 @@ D'autres fonctionnalitées sont implémentées afin d'assurer le bon fonctionnem
 
 
 ## Quick Start
-Cette application a été developpée sous Python3.8.
+Cette application a été developpée sous **Python3.8** et est accessible sur une version 3.9 de python. 
 Pour lancer le code, vous allez suivre ces étapes simples:
 ### Cloner le repo
 Première étape, cloner le repo via les commandes ci-dessous. Vous pouvez également simplement télécharger le projet.

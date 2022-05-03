@@ -10,7 +10,7 @@ def get_lyrics(artist_name):
     """
     songs = get_random_track(artist_name)[0]
     songs["suggested_youtube_url"] = get_random_video(artist_name)[0]
-    res = requests.get(os.getenv("url_lyric") + artist_name + "/" + songs["title"])
+    res = requests.get(os.getenv("URL_LYRIC") + artist_name + "/" + songs["title"])
     if res.status_code == 200:
         songs["lyrics"] = res.json()
     else:

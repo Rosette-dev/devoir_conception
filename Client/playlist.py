@@ -25,7 +25,7 @@ def get_playlists(liste_artiste):
     for i in range(20):
         step = randrange(0, len(liste_artiste))
         artist_name = liste_artiste[step]
-        r = requests.get(os.getenv("url_service") + "/random/" + artist_name).json()
+        r = requests.get(os.getenv("URL_SERVICE") + "/random/" + artist_name).json()
         playlist[i] = r['lyrics']
     return playlist 
 

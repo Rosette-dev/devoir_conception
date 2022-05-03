@@ -21,9 +21,9 @@ async def get_playlist(artist_name):
 
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="localhost", port=int(os.getenv("TARGET_PORT")))
+    uvicorn.run(app, port=int(os.getenv("TARGET_PORT")))
 
-
+ 
 
 
 
