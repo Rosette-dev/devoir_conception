@@ -36,10 +36,11 @@ Assurez vous que l'IDE que vous utilisez est bien configuré notamment au niveau
 Ensuite, il est necessaire d'installer les libraries utiles (indispensable) au fonctionnement de l'app via la commande ci-dessous.
 Pour installer les librairies utiles pour le webservice, il faut lancer le code suivant:
 ```
+cd devoir_conception
 cd Serveur
 pip install -r requirements.txt
 ```
-Pour installer celles utiles pour la partie Client, il afut lancer le code suivant:
+Pour installer celles utiles pour la partie Client, il faut lancer le code suivant:
 ```
 cd ..
 cd Client
@@ -51,9 +52,8 @@ Ensuite dernière étape avant de profiter pleinement de l'application, la confi
 Dans un fichier ```.env``` que vous placer dans le dossier **Client**, vous copier coller et remplissez les informations ci-dessous afin d'obtenir la playliste qui vous ravira. 
 ```
 CLIENT_DATA= *****
-url_service= "http://127.0.0.1:8000"
 TARGET_PORT=8000
-
+URL_SERVICE= "http://127.0.0.1:8000"
 ```
 **CLIENT_DATA** doit être un json qui permet d'avoir le nom des artistes. Par exemple:
 ```ruby
@@ -72,13 +72,15 @@ TARGET_PORT=8000
 Une fois que vous avez correctement installé et configuré l'application, vous pouvez l'utiliser pour générer vos playlists.
 Pour utiliser le webservice, il faut lancer le fichier ```main.py``` situé dans le fichier Serveur. Ensuite, dans un autre terminal, lancer un autre fichier ```main.py``` situé dans le dossier Client.
 
-## Tests unitaires
+## Tests unitaires et Automatisation
  Nous avons testé la méthode **get_artiste()** qui permet de récupérer l'identifiant d'un artiste. Nous avons aussi testé le bon fonctionnement du Webservice.
  Pour lancer le test, il faut exécuter le bout de code suivant dans le terminal: 
 ``` 
 cd Serveur
 python -m unittest test.py
 ```
+Un pipeline a été mis en place.Il s'exécute à chaque push et lance les tests unitaires présents dans le projet.
+
 # Bonne utilisation !
 
 

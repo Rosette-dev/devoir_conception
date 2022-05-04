@@ -10,7 +10,7 @@ app = FastAPI()
 
 
 app.add_api_route("/", health([audiodb_artiste_condition, audiodb_album_condition, 
-                                       audiodb_track_condition,audiodb_video_condition,lyrics_condition ]))
+                                       audiodb_track_condition,lyrics_condition]))
 
 
 

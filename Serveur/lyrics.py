@@ -1,7 +1,7 @@
 from dotenv import load_dotenv
 import requests
 import os
-from audiodb import get_random_track, get_random_video
+from audiodb import get_random_track
 
 
 def get_lyrics(artist_name):
@@ -9,7 +9,7 @@ def get_lyrics(artist_name):
     l'api LyricsOvh
     """
     songs = get_random_track(artist_name)[0]
-    songs["suggested_youtube_url"] = get_random_video(artist_name)[0]
+    #songs["suggested_youtube_url"] = get_random_video(artist_name)[0]
     res = requests.get(os.getenv("URL_LYRIC") + artist_name + "/" + songs["title"])
     if res.status_code == 200:
         songs["lyrics"] = res.json()

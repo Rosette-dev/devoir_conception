@@ -17,7 +17,6 @@ def get_playlists(liste_artiste):
     """Mise en place du scénario client
     Args:
         liste_artiste (str): la liste des noms des artistes obtenue à partir du json
-
     Returns:
         playlist (dict): une playliste aléatoire basée sur le json
     """
